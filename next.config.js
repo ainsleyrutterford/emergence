@@ -3,7 +3,7 @@
 const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  assetPrefix: prod ? 'https://cdn.statically.io/gh/ainsleyrutterford/ainsleyrutterford.github.io/nextjs/gh-pages/' : '',
+  assetPrefix: prod ? 'https://cdn.statically.io/gh/ainsleyrutterford/nextjs/gh-pages/' : '',
   distDir: 'build',
   reactStrictMode: true,
 }
