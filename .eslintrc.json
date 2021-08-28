@@ -1,3 +1,33 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        // enable JSX in .tsx files
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+        // https://stackoverflow.com/a/64024916
+        // note you must disable the base rule as it can report incorrect errors
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        // use double quotes
+        "quotes": ["error", "double", { "avoidEscape": true }],
+        "jsx-quotes": ["error", "prefer-double"]
+    }
 }
