@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
@@ -15,8 +15,6 @@ jobs:
           npm ci
           npm run build
           npm run export
-        env:
-            CI: true
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
