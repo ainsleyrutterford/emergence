@@ -4,9 +4,10 @@
 const withOptimizedImages = require('next-optimized-images');
 
 const prod = process.env.NODE_ENV === 'production'
+const repoName = process.env.NEXT_PUBLIC_REPO_NAME;
 
 module.exports = withOptimizedImages({
-  assetPrefix: prod ? '/nextjs/' : '.',
+  assetPrefix: prod ? `/${repoName}/` : '.',
   reactStrictMode: true,
     // https://github.com/vercel/next.js/issues/21079
   images: {
