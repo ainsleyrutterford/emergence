@@ -3,7 +3,11 @@
 const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  assetPrefix: prod ? 'https://cdn.statically.io/gh/ainsleyrutterford/nextjs/gh-pages/' : '',
-  distDir: 'build',
+  assetPrefix: prod ? '/nextjs/' : '',
   reactStrictMode: true,
+  // https://github.com/vercel/next.js/issues/21079
+  images: {
+    loader: "imgix",
+    path: "https://noop/",
+  }
 }
