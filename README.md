@@ -2,7 +2,7 @@
 
 ## Development
 
-Initial setup:
+First, clone the repo and install any dependencies:
 
 ```
 git clone git@github.com:ainsleyrutterford/emergence.git
