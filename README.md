@@ -1,4 +1,4 @@
-# Emergence
+# [Emergence](https://ainsleyrutterford.github.io/emergence)
 
 ![license](https://img.shields.io/github/license/ainsleyrutterford/emergence?label=License)
 ![typescript](https://img.shields.io/github/languages/top/ainsleyrutterford/emergence?label=TypeScript)
