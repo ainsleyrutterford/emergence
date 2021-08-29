@@ -1,5 +1,7 @@
 # Emergence
 
+![license](https://img.shields.io/github/license/ainsleyrutterford/nextjs?color=green)
+
 ## Development
 
 First, clone the repo and install any dependencies:
