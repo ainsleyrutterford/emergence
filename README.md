@@ -1,6 +1,6 @@
 # Emergence
 
-![license](https://img.shields.io/github/license/ainsleyrutterford/nextjs?color=green)
+![license](https://img.shields.io/github/license/ainsleyrutterford/emergence?color=green)
 
 ## Development
 
