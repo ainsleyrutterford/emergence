@@ -2,7 +2,7 @@
 
 ![license](https://img.shields.io/github/license/ainsleyrutterford/emergence?label=License)
 ![typescript](https://img.shields.io/github/languages/top/ainsleyrutterford/emergence?label=TypeScript)
-![code quality](https://img.shields.io/codefactor/grade/github/ainsleyrutterford/emergence?label=Code%20Quality)
+![code quality](https://img.shields.io/codefactor/grade/github/ainsleyrutterford/emergence?label=Code%20quality)
 
 ## Development
 
