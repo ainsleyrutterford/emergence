@@ -1,6 +1,7 @@
 # Emergence
 
-![license](https://img.shields.io/github/license/ainsleyrutterford/emergence?color=green)
+![license](https://img.shields.io/github/license/ainsleyrutterford/emergence?label=License)
+![typescript](https://img.shields.io/github/languages/top/ainsleyrutterford/emergence?label=TypeScript)
 
 ## Development
 
