@@ -38,3 +38,9 @@ There is also a GitHub action ([`.github/workflows/lint.yml`](.github/workflows/
 The site should automatically be deployed to [https://ainsleyrutterford.github.io/emergence](https://ainsleyrutterford.github.io/emergence) by a GitHub action ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)) that is triggered when any code is pushed to the [`main`](https://github.com/ainsleyrutterford/emergence/tree/main) branch.
 
 The action uses `next build` and `next export` to generate HTML, CSS, and JS files which can be served statically. Once these files are generated, the [`github-pages-deploy-action`](https://github.com/JamesIves/github-pages-deploy-action) is used to push the generated files to the [`gh-pages`](https://github.com/ainsleyrutterford/emergence/tree/gh-pages) branch which is used by GitHub pages to serve the files.
+
+
+## Acknowledgements
+
+- [LaTeX.CSS](https://github.com/vincentdoerig/latex-css) &mdash; used to replicate LaTeX styling
+- [GitHub Markdown CSS generation](https://github.com/hyrious/generate-github-markdown-css) &mdash; used to replicate GitHub's Markdown styling (specifically [hyrious' fork](https://github.com/hyrious) which includes darkmode)
