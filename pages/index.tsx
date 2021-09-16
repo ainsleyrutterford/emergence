@@ -22,7 +22,6 @@ const Home: NextPage = () => {
     <button onClick={() => setStyle({ ...style, style: Style.GitHub })}>GitHub style</button>
     <button onClick={() => setStyle({ ...style, darkmode: !style.darkmode })}>Toggle darkmode</button>
     <div className="markdown-body" style={{ maxWidth: "1000px", marginLeft: "auto", marginRight: "auto" }}>
-      {`Hello: ${style.darkmode} ...`}
       <TestHTML />
     </div>
   </div>
