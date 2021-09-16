@@ -97,7 +97,7 @@
 	background-color: var(--color-bg-canvas);
 }
 
-/* original CSS from LaTeX.CSS */
+/* original CSS from LaTeX.CSS. .markdown-body has been added to each selector */
 @font-face {
 	font-family: 'Latin Modern';
 	font-style: normal;
@@ -130,35 +130,32 @@
 	src: url('./fonts/LM-bold-italic.woff2') format('woff2'), url('./fonts/LM-bold-italic.woff') format('woff'), url('./fonts/LM-bold-italic.ttf') format('truetype')
 }
 
-*,
-*::before,
-*::after {
+.markdown-body *,
+.markdown-body *::before,
+.markdown-body *::after {
 	box-sizing: border-box
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-dl,
-dd {
+.markdown-body body,
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body p,
+.markdown-body ul[class],
+.markdown-body ol[class],
+.markdown-body li,
+.markdown-body figure,
+.markdown-body figcaption,
+.markdown-body dl,
+.markdown-body dd {
 	margin: 0
 }
 
-html {
-	font-size: 1rem;
-	scroll-behavior: smooth
-}
-
-body {
+.markdown-body {
 	font-family: 'Latin Modern', Georgia, Cambria, 'Times New Roman', Times, serif;
+	font-size: 1rem;
+	scroll-behavior: smooth;
 	line-height: 1.8;
 	max-width: 80ch;
 	min-height: 100vh;
@@ -173,7 +170,7 @@ body {
 	text-rendering: optimizeLegibility
 }
 
-p {
+.markdown-body p {
 	text-align: justify;
 	hyphens: auto;
 	-webkit-hyphens: auto;
@@ -181,74 +178,74 @@ p {
 	margin-top: 1rem
 }
 
-a:not([class]) {
+.markdown-body a:not([class]) {
 	text-decoration-skip-ink: auto
 }
 
-a,
-a:visited {
+.markdown-body a,
+.markdown-body a:visited {
 	color: var(--color-text-link);
 }
 
-a:focus {
+.markdown-body a:focus {
 	outline-offset: 2px;
 	outline: 2px solid var(--color-text-primary);
 }
 
-img {
+.markdown-body img {
 	max-width: 100%;
 	height: auto;
 	display: block
 }
 
-input,
-button,
-textarea,
-select {
+.markdown-body input,
+.markdown-body button,
+.markdown-body textarea,
+.markdown-body select {
 	font: inherit
 }
 
-textarea {
+.markdown-body textarea {
 	width: 100%
 }
 
-article>*+* {
+.markdown-body article>*+* {
 	margin-top: 1em
 }
 
-code,
-pre,
-kbd {
+.markdown-body code,
+.markdown-body pre,
+.markdown-body kbd {
 	font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 	font-size: 85%;
 	background-color: var(--color-bg-tertiary);
 	border-radius: 6px;
 }
 
-code {
+.markdown-body code {
 	padding: .2em .4em;
 	margin: 0;
 }
 
-pre {
+.markdown-body pre {
 	padding: 1rem 1.4rem;
 	max-width: 100%;
 	overflow: auto;
 }
 
-pre code {
+.markdown-body pre code {
 	font-size: 95%;
 	position: relative
 }
 
-kbd {
+.markdown-body kbd {
 	border: 1px solid hsl(210, 5%, 70%);
 	border-radius: 2px;
 	padding: 2px 4px;
 	font-size: 75%
 }
 
-table {
+.markdown-body table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: auto;
@@ -259,32 +256,32 @@ table {
 	counter-increment: caption
 }
 
-table tr>th[scope='col'] {
+.markdown-body table tr>th[scope='col'] {
 	border-bottom: 1.36px solid var(--color-table-borders)
 }
 
-table tr>th[scope='row'] {
+.markdown-body table tr>th[scope='row'] {
 	border-right: 1.36px solid var(--color-table-borders)
 }
 
-table>tbody>tr:first-child>td,
-table>tbody>tr:first-child>th {
+.markdown-body table>tbody>tr:first-child>td,
+.markdown-body table>tbody>tr:first-child>th {
 	border-top: 1.36px solid var(--color-table-borders)
 }
 
-table>tbody>tr:last-child>td,
-table>tbody>tr:last-child>th {
+.markdown-body table>tbody>tr:last-child>td,
+.markdown-body table>tbody>tr:last-child>th {
 	border-bottom: 1.36px solid var(--color-table-borders)
 }
 
-th,
-td {
+.markdown-body th,
+.markdown-body td {
 	text-align: left;
 	padding: .5rem;
 	line-height: 1.1
 }
 
-caption {
+.markdown-body caption {
 	text-align: left;
 	font-size: .923em;
 	padding: 0 .25em .25em;
@@ -292,107 +289,107 @@ caption {
 	margin-left: 0
 }
 
-caption::before {
+.markdown-body caption::before {
 	content: 'Table ' counter(caption) '. ';
 	font-weight: bold
 }
 
-.scroll-wrapper {
+.markdown-body .scroll-wrapper {
 	overflow-x: auto
 }
 
-.scroll-wrapper>table td {
+.markdown-body .scroll-wrapper>table td {
 	white-space: nowrap
 }
 
-h1:first-child {
+.markdown-body h1:first-child {
 	text-align: center
 }
 
-nav ol {
+.markdown-body nav ol {
 	counter-reset: item;
 	padding-left: 2rem
 }
 
-nav li {
+.markdown-body nav li {
 	display: block
 }
 
-nav li:before {
+.markdown-body nav li:before {
 	content: counters(item, '.') ' ';
 	counter-increment: item;
 	padding-right: .85rem
 }
 
-dl dd {
+.markdown-body dl dd {
 	text-align: center
 }
 
-.theorem {
+.markdown-body .theorem {
 	counter-increment: theorem;
 	display: block;
 	margin: 12px 0;
 	font-style: italic
 }
 
-.theorem::before {
+.markdown-body .theorem::before {
 	content: 'Theorem ' counter(theorem) '. ';
 	font-weight: bold;
 	font-style: normal
 }
 
-.lemma {
+.markdown-body .lemma {
 	counter-increment: theorem;
 	display: block;
 	margin: 12px 0;
 	font-style: italic
 }
 
-.lemma::before {
+.markdown-body .lemma::before {
 	content: 'Lemma ' counter(theorem) '. ';
 	font-weight: bold;
 	font-style: normal
 }
 
-.proof {
+.markdown-body .proof {
 	display: block;
 	margin: 12px 0;
 	font-style: normal;
 	position: relative
 }
 
-.proof::before {
+.markdown-body .proof::before {
 	content: 'Proof. ' attr(title);
 	font-style: italic
 }
 
-.proof:after {
+.markdown-body .proof:after {
 	content: '◾️';
 	position: absolute;
 	right: -12px;
 	bottom: -2px
 }
 
-.definition {
+.markdown-body .definition {
 	counter-increment: definition;
 	display: block;
 	margin: 12px 0;
 	font-style: normal
 }
 
-.definition::before {
+.markdown-body .definition::before {
 	content: 'Definition ' counter(definition) '. ';
 	font-weight: bold;
 	font-style: normal
 }
 
-.author {
+.markdown-body .author {
 	margin: .85rem 0;
 	font-variant-caps: small-caps;
 	text-align: center
 }
 
-.sidenote {
+.markdown-body .sidenote {
 	font-size: .8rem;
 	float: right;
 	clear: right;
@@ -401,67 +398,67 @@ dl dd {
 	margin-bottom: 1em
 }
 
-.sidenote.left {
+.markdown-body .sidenote.left {
 	float: left;
 	margin-left: -20vw;
 	margin-bottom: 1em
 }
 
-.sidenote:target {
+.markdown-body .sidenote:target {
 	border: hsl(55, 55%, 70%) 1.5px solid;
 	padding: 0 .5rem;
 	scroll-margin-block-start: 10rem
 }
 
-.sidenote-number {
+.markdown-body .sidenote-number {
 	counter-increment: sidenote-counter
 }
 
-.sidenote-number::after,
-.sidenote::before {
+.markdown-body .sidenote-number::after,
+.markdown-body .sidenote::before {
 	position: relative;
 	vertical-align: baseline
 }
 
-.sidenote-number::after {
+.markdown-body .sidenote-number::after {
 	content: counter(sidenote-counter);
 	font-size: .7rem;
 	top: -0.5rem;
 	left: .1rem
 }
 
-.sidenote-number~.sidenote::before {
+.markdown-body .sidenote-number~.sidenote::before {
 	content: counter(sidenote-counter) ' ';
 	font-size: .7rem;
 	top: -0.5rem
 }
 
-label.sidenote-toggle:not(.sidenote-number) {
+.markdown-body label.sidenote-toggle:not(.sidenote-number) {
 	display: none
 }
 
-blockquote .sidenote {
+.markdown-body blockquote .sidenote {
 	margin-right: -24vw;
 	width: 18vw
 }
 
-label.sidenote-toggle {
+.markdown-body label.sidenote-toggle {
 	display: inline;
 	cursor: pointer
 }
 
-input.sidenote-toggle {
+.markdown-body input.sidenote-toggle {
 	display: none
 }
 
 @media(max-width:1050px) {
-	label.sidenote-toggle:not(.sidenote-number) {
+	.markdown-body label.sidenote-toggle:not(.sidenote-number) {
 		display: inline
 	}
-	.sidenote {
+	.markdown-body .sidenote {
 		display: none
 	}
-	.sidenote-toggle:checked+.sidenote {
+	.markdown-body .sidenote-toggle:checked+.sidenote {
 		display: block;
 		margin: .5rem 1.25rem 1rem .5rem;
 		float: left;
@@ -469,39 +466,39 @@ input.sidenote-toggle {
 		clear: both;
 		width: 95%
 	}
-	blockquote .sidenote {
+	.markdown-body blockquote .sidenote {
 		margin-right: -25vw;
 		width: 16vw
 	}
 }
 
-.footnotes p {
+.markdown-body .footnotes p {
 	text-align: left;
 	line-height: 1.5;
 	font-size: 85%;
 	margin-bottom: .4rem
 }
 
-.footnotes {
+.markdown-body .footnotes {
 	border-top: 1px solid hsl(0, 0%, 39%)
 }
 
-.abstract,
-.abstract p {
+.markdown-body .abstract,
+.markdown-body .abstract p {
 	text-align: center;
 	margin-top: 0
 }
 
-.abstract {
+.markdown-body .abstract {
 	margin: 2.25rem 0
 }
 
-.abstract>h2 {
+.markdown-body .abstract>h2 {
 	font-size: 1rem;
 	margin-bottom: -0.2rem
 }
 
-.latex span:nth-child(1) {
+.markdown-body .latex span:nth-child(1) {
 	text-transform: uppercase;
 	font-size: .75em;
 	vertical-align: .28em;
@@ -510,7 +507,7 @@ input.sidenote-toggle {
 	line-height: 1ex
 }
 
-.latex span:nth-child(2) {
+.markdown-body .latex span:nth-child(2) {
 	text-transform: uppercase;
 	vertical-align: -0.5ex;
 	margin-left: -0.1667em;
@@ -518,66 +515,66 @@ input.sidenote-toggle {
 	line-height: 1ex
 }
 
-h1 {
+.markdown-body h1 {
 	font-size: 2.5rem;
 	line-height: 3.25rem;
 	margin-bottom: 1.625rem
 }
 
-h2 {
+.markdown-body h2 {
 	font-size: 1.7rem;
 	line-height: 2rem;
 	margin-top: 3rem
 }
 
-h3 {
+.markdown-body h3 {
 	font-size: 1.4rem;
 	margin-top: 2.5rem
 }
 
-h4 {
+.markdown-body h4 {
 	font-size: 1.2rem;
 	margin-top: 2rem
 }
 
-h5 {
+.markdown-body h5 {
 	font-size: 1rem;
 	margin-top: 1.8rem
 }
 
-h6 {
+.markdown-body h6 {
 	font-size: 1rem;
 	font-style: italic;
 	font-weight: normal;
 	margin-top: 2.5rem
 }
 
-h3,
-h4,
-h5,
-h6 {
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
 	line-height: 1.625rem
 }
 
-h1+h2 {
+.markdown-body h1+h2 {
 	margin-top: 1.625rem
 }
 
-h2+h3,
-h3+h4,
-h4+h5 {
+.markdown-body h2+h3,
+.markdown-body h3+h4,
+.markdown-body h4+h5 {
 	margin-top: .8rem
 }
 
-h5+h6 {
+.markdown-body h5+h6 {
 	margin-top: -0.8rem
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
 	margin-bottom: .8rem
 }
 
