@@ -8,13 +8,19 @@ export enum Style {
   GitHub,
 }
 
-export const StyleContext = createContext([] as any[]);
+export const StyleContext = createContext({
+  style: {
+    darkmode: false, style: Style.LaTeX, 
+  },
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  setStyle: (style: { darkmode: boolean, style: Style }) => {},
+});
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [style, setStyle] = useState({ darkmode: false, style: Style.LaTeX });
 
   return (
-    <StyleContext.Provider value={[style, setStyle]}>
+    <StyleContext.Provider value={{ style, setStyle }}>
       <Component {...pageProps} />
       {/* This allows us to change the background programmatically */}
       <style jsx global>
