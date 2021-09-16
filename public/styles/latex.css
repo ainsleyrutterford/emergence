@@ -4,9 +4,100 @@
  * Source: https://github.com/vincentdoerig/latex-css
  * Licensed under MIT (https://github.com/vincentdoerig/latex-css/blob/master/LICENSE)
  *
- * We have copy-pasted this file in case latex-css is down for any reason.
+ * We have copy-pasted this file to add some custom rules taken from the GitHub
+ * Markdown CSS, including darkmode and syntax highlighting.
 */
 
+/* Darkmode stuff taken from GitHub Markdown CSS code */
+:root,
+[data-color-mode=dark][data-dark-theme=light],
+[data-color-mode=light][data-light-theme=light] {
+	color-scheme: light;
+	--color-text-primary: #24292e;
+	--color-text-link: #0366d6;
+	--color-bg-canvas: #ffffff;
+	--color-bg-tertiary: #f6f8fa;
+	--color-table-borders: black;
+	/* syntax highlighting */
+	--color-prettylights-syntax-comment: #6a737d;
+	--color-prettylights-syntax-constant: #005cc5;
+	--color-prettylights-syntax-entity: #6f42c1;
+	--color-prettylights-syntax-storage-modifier-import: #24292e;
+	--color-prettylights-syntax-entity-tag: #22863a;
+	--color-prettylights-syntax-keyword: #d73a49;
+	--color-prettylights-syntax-string: #032f62;
+	--color-prettylights-syntax-variable: #e36209;
+	--color-prettylights-syntax-brackethighlighter-unmatched: #b31d28;
+	--color-prettylights-syntax-invalid-illegal-text: #fafbfc;
+	--color-prettylights-syntax-invalid-illegal-bg: #b31d28;
+	--color-prettylights-syntax-carriage-return-text: #fafbfc;
+	--color-prettylights-syntax-carriage-return-bg: #d73a49;
+	--color-prettylights-syntax-string-regexp: #22863a;
+	--color-prettylights-syntax-markup-list: #735c0f;
+	--color-prettylights-syntax-markup-heading: #005cc5;
+	--color-prettylights-syntax-markup-italic: #24292e;
+	--color-prettylights-syntax-markup-bold: #24292e;
+	--color-prettylights-syntax-markup-deleted-text: #b31d28;
+	--color-prettylights-syntax-markup-deleted-bg: #ffeef0;
+	--color-prettylights-syntax-markup-inserted-text: #22863a;
+	--color-prettylights-syntax-markup-inserted-bg: #f0fff4;
+	--color-prettylights-syntax-markup-changed-text: #e36209;
+	--color-prettylights-syntax-markup-changed-bg: #ffebda;
+	--color-prettylights-syntax-markup-ignored-text: #f6f8fa;
+	--color-prettylights-syntax-markup-ignored-bg: #005cc5;
+	--color-prettylights-syntax-meta-diff-range: #6f42c1;
+	--color-prettylights-syntax-brackethighlighter-angle: #586069;
+	--color-prettylights-syntax-sublimelinter-gutter-mark: #959da5;
+	--color-prettylights-syntax-constant-other-reference-link: #032f62
+}
+
+[data-color-mode=dark][data-dark-theme=dark],
+[data-color-mode=light][data-light-theme=dark] {
+	color-scheme: dark;
+	--color-text-primary: #c9d1d9;
+	--color-text-link: #58a6ff;
+	--color-bg-canvas: #0d1117;
+	--color-bg-tertiary: #161b22;
+	--color-table-borders: white;
+	/* syntax highlighting */
+	--color-prettylights-syntax-comment: #8b949e;
+	--color-prettylights-syntax-constant: #79c0ff;
+	--color-prettylights-syntax-entity: #d2a8ff;
+	--color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+	--color-prettylights-syntax-entity-tag: #7ee787;
+	--color-prettylights-syntax-keyword: #ff7b72;
+	--color-prettylights-syntax-string: #a5d6ff;
+	--color-prettylights-syntax-variable: #ffa657;
+	--color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+	--color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+	--color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+	--color-prettylights-syntax-carriage-return-text: #f0f6fc;
+	--color-prettylights-syntax-carriage-return-bg: #b62324;
+	--color-prettylights-syntax-string-regexp: #7ee787;
+	--color-prettylights-syntax-markup-list: #f2cc60;
+	--color-prettylights-syntax-markup-heading: #1f6feb;
+	--color-prettylights-syntax-markup-italic: #c9d1d9;
+	--color-prettylights-syntax-markup-bold: #c9d1d9;
+	--color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+	--color-prettylights-syntax-markup-deleted-bg: #67060c;
+	--color-prettylights-syntax-markup-inserted-text: #aff5b4;
+	--color-prettylights-syntax-markup-inserted-bg: #033a16;
+	--color-prettylights-syntax-markup-changed-text: #ffdfb6;
+	--color-prettylights-syntax-markup-changed-bg: #5a1e02;
+	--color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+	--color-prettylights-syntax-markup-ignored-bg: #1158c7;
+	--color-prettylights-syntax-meta-diff-range: #d2a8ff;
+	--color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+	--color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+	--color-prettylights-syntax-constant-other-reference-link: #a5d6ff
+}
+
+[data-color-mode] {
+	color: var(--color-text-primary);
+	background-color: var(--color-bg-canvas);
+}
+
+/* original CSS from LaTeX.CSS */
 @font-face {
 	font-family: 'Latin Modern';
 	font-style: normal;
@@ -77,8 +168,8 @@ body {
 	counter-reset: theorem;
 	counter-reset: definition;
 	counter-reset: sidenote-counter;
-	color: hsl(0, 5%, 10%);
-	background-color: hsl(210, 20%, 98%);
+	color: var(--color-text-primary);
+	background-color: var(--color-bg-canvas);
 	text-rendering: optimizeLegibility
 }
 
@@ -96,12 +187,12 @@ a:not([class]) {
 
 a,
 a:visited {
-	color: #a00
+	color: var(--color-text-link);
 }
 
 a:focus {
 	outline-offset: 2px;
-	outline: 2px solid hsl(220, 90%, 52%)
+	outline: 2px solid var(--color-text-primary);
 }
 
 img {
@@ -129,15 +220,20 @@ code,
 pre,
 kbd {
 	font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-	font-size: 85%
+	font-size: 85%;
+	background-color: var(--color-bg-tertiary);
+	border-radius: 6px;
+}
+
+code {
+	padding: .2em .4em;
+	margin: 0;
 }
 
 pre {
 	padding: 1rem 1.4rem;
 	max-width: 100%;
 	overflow: auto;
-	border-radius: 4px;
-	background: hsl(210, 28%, 93%)
 }
 
 pre code {
@@ -146,7 +242,6 @@ pre code {
 }
 
 kbd {
-	background: hsl(210, 5%, 100%);
 	border: 1px solid hsl(210, 5%, 70%);
 	border-radius: 2px;
 	padding: 2px 4px;
@@ -158,28 +253,28 @@ table {
 	border-spacing: 0;
 	width: auto;
 	max-width: 100%;
-	border-top: 2.27px solid black;
-	border-bottom: 2.27px solid black;
+	border-top: 2.27px solid var(--color-table-borders);
+	border-bottom: 2.27px solid var(--color-table-borders);
 	overflow-x: auto;
 	counter-increment: caption
 }
 
 table tr>th[scope='col'] {
-	border-bottom: 1.36px solid black
+	border-bottom: 1.36px solid var(--color-table-borders)
 }
 
 table tr>th[scope='row'] {
-	border-right: 1.36px solid black
+	border-right: 1.36px solid var(--color-table-borders)
 }
 
 table>tbody>tr:first-child>td,
 table>tbody>tr:first-child>th {
-	border-top: 1.36px solid black
+	border-top: 1.36px solid var(--color-table-borders)
 }
 
 table>tbody>tr:last-child>td,
 table>tbody>tr:last-child>th {
-	border-bottom: 1.36px solid black
+	border-bottom: 1.36px solid var(--color-table-borders)
 }
 
 th,
@@ -484,4 +579,128 @@ h4,
 h5,
 h6 {
 	margin-bottom: .8rem
+}
+
+/* syntax highlighting copied from GitHub Markdown CSS */
+.markdown-body .pl-c {
+	color: var(--color-prettylights-syntax-comment)
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: var(--color-prettylights-syntax-constant)
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: var(--color-prettylights-syntax-entity)
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+	color: var(--color-prettylights-syntax-storage-modifier-import)
+}
+
+.markdown-body .pl-ent {
+	color: var(--color-prettylights-syntax-entity-tag)
+}
+
+.markdown-body .pl-k {
+	color: var(--color-prettylights-syntax-keyword)
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+	color: var(--color-prettylights-syntax-string)
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+	color: var(--color-prettylights-syntax-variable)
+}
+
+.markdown-body .pl-bu {
+	color: var(--color-prettylights-syntax-brackethighlighter-unmatched)
+}
+
+.markdown-body .pl-ii {
+	color: var(--color-prettylights-syntax-invalid-illegal-text);
+	background-color: var(--color-prettylights-syntax-invalid-illegal-bg)
+}
+
+.markdown-body .pl-c2 {
+	color: var(--color-prettylights-syntax-carriage-return-text);
+	background-color: var(--color-prettylights-syntax-carriage-return-bg)
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M"
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: 700;
+	color: var(--color-prettylights-syntax-string-regexp)
+}
+
+.markdown-body .pl-ml {
+	color: var(--color-prettylights-syntax-markup-list)
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: 700;
+	color: var(--color-prettylights-syntax-markup-heading)
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: var(--color-prettylights-syntax-markup-italic)
+}
+
+.markdown-body .pl-mb {
+	font-weight: 700;
+	color: var(--color-prettylights-syntax-markup-bold)
+}
+
+.markdown-body .pl-md {
+	color: var(--color-prettylights-syntax-markup-deleted-text);
+	background-color: var(--color-prettylights-syntax-markup-deleted-bg)
+}
+
+.markdown-body .pl-mi1 {
+	color: var(--color-prettylights-syntax-markup-inserted-text);
+	background-color: var(--color-prettylights-syntax-markup-inserted-bg)
+}
+
+.markdown-body .pl-mc {
+	color: var(--color-prettylights-syntax-markup-changed-text);
+	background-color: var(--color-prettylights-syntax-markup-changed-bg)
+}
+
+.markdown-body .pl-mi2 {
+	color: var(--color-prettylights-syntax-markup-ignored-text);
+	background-color: var(--color-prettylights-syntax-markup-ignored-bg)
+}
+
+.markdown-body .pl-mdr {
+	font-weight: 700;
+	color: var(--color-prettylights-syntax-meta-diff-range)
+}
+
+.markdown-body .pl-ba {
+	color: var(--color-prettylights-syntax-brackethighlighter-angle)
+}
+
+.markdown-body .pl-sg {
+	color: var(--color-prettylights-syntax-sublimelinter-gutter-mark)
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: var(--color-prettylights-syntax-constant-other-reference-link)
 }
