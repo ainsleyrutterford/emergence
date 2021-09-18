@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import TestHTML from "../components/test-html";
 
 import { Article } from "../components/article";
-import { Navbar } from "../components/navbar";
+import { Navbar } from "../components/Navbar/navbar";
 
 const Home: NextPage = () => {
   return (
