@@ -6,13 +6,13 @@
 }
 
 .navbar-light {
-  background-color: rgba(252, 252, 252, .97);
-  border-bottom: 0.1px solid rgba(226, 230, 236, .99);
+  background-color: rgba(252, 252, 252, 0.97);
+  border-bottom: 0.1px solid rgba(226, 230, 236, 0.99);
 }
 
 .navbar-dark {
-  background-color: rgba(13, 17, 23, .97);
-  border-bottom: 0.1px solid rgba(26, 30, 36, .99);
+  background-color: rgba(13, 17, 23, 0.97);
+  border-bottom: 0.1px solid rgba(26, 30, 36, 0.99);
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -23,12 +23,12 @@
   }
 
   .navbar-light {
-    background-color: rgba(252, 252, 252, .83);
-    border-bottom: 0.1px solid rgba(226, 230, 236, .99);
+    background-color: rgba(252, 252, 252, 0.83);
+    border-bottom: 0.1px solid rgba(226, 230, 236, 0.99);
   }
 
   .navbar-dark {
-    background-color: rgba(13, 17, 23, .81);
-    border-bottom: 0.1px solid rgba(26, 30, 36, .99);
+    background-color: rgba(13, 17, 23, 0.81);
+    border-bottom: 0.1px solid rgba(26, 30, 36, 0.99);
   }
 }

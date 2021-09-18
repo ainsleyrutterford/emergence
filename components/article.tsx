@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { Style, StyleContext } from "../pages/_app";
 import Head from "next/head";
+import React, { useContext } from "react";
 
-import latexStyles from "../styles/latex.module.css";
+import { Style, StyleContext } from "../pages/_app";
 import githubStyles from "../styles/github.module.css";
+import latexStyles from "../styles/latex.module.css";
 
 interface Props {
   title: string;
@@ -17,13 +17,21 @@ export const Article = ({ title, children }: Props) => {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="icon" href={`/${process.env.NEXT_PUBLIC_REPO_NAME}/favicon.ico`} />
+        <link
+          rel="icon"
+          href={`/${process.env.NEXT_PUBLIC_REPO_NAME}/favicon.ico`}
+        />
       </Head>
       <div
-        // Set article style
-        className={style.style === Style.LaTeX ? latexStyles["markdown-body"] : githubStyles["markdown-body"]}
         // Set article dark mode
-        {...({ "color-mode": style.darkmode ? "dark" : "light" })}>
+        {...{ "color-mode": style.darkmode ? "dark" : "light" }}
+        // Set article style
+        className={
+          style.style === Style.LaTeX
+            ? latexStyles["markdown-body"]
+            : githubStyles["markdown-body"]
+        }
+      >
         {children}
       </div>
     </>
