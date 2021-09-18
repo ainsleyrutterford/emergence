@@ -161,7 +161,7 @@
 	min-height: 100vh;
 	overflow-x: hidden;
 	margin: 0 auto;
-	padding: 2rem 1.25rem;
+	margin-top: 1rem;
 	counter-reset: theorem;
 	counter-reset: definition;
 	counter-reset: sidenote-counter;
