@@ -1,5 +1,7 @@
 import React from "react";
 
+import latexStyles from "../styles/latex.module.css";
+
 const TestHTML = () => (
     <>
     <section id="text">
@@ -154,6 +156,7 @@ const TestHTML = () => (
         </article>
         <article id="text__tables">
             <header><h2>Tabular data</h2></header>
+            <div className={latexStyles["scroll-wrapper"]}>
             <table>
                 <caption>Table Caption</caption>
                 <thead>
@@ -205,6 +208,7 @@ const TestHTML = () => (
                     </tr>
                 </tbody>
             </table>
+            </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="text__code">
