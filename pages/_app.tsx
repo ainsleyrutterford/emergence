@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 
-import "../styles/globals.css";
+import "../styles/global.css";
 import type { AppProps } from "next/app";
 
 export enum Style {
