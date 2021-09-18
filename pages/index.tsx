@@ -1,10 +1,9 @@
-import React from "react";
-
 import type { NextPage } from "next";
-import TestHTML from "../components/test-html";
+import React from "react";
 
 import { Article } from "../components/article";
 import { Navbar } from "../components/Navbar/navbar";
+import TestHTML from "../components/test-html";
 
 const Home: NextPage = () => {
   return (

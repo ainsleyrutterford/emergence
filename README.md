@@ -39,7 +39,6 @@ The site should automatically be deployed to [https://ainsleyrutterford.github.i
 
 The action uses `next build` and `next export` to generate HTML, CSS, and JS files which can be served statically. Once these files are generated, the [`github-pages-deploy-action`](https://github.com/JamesIves/github-pages-deploy-action) is used to push the generated files to the [`gh-pages`](https://github.com/ainsleyrutterford/emergence/tree/gh-pages) branch which is used by GitHub pages to serve the files.
 
-
 ## Acknowledgements
 
 - [LaTeX.CSS](https://github.com/vincentdoerig/latex-css) &mdash; used to replicate LaTeX styling

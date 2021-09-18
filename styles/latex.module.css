@@ -12,7 +12,7 @@
 .markdown-body *,
 .markdown-body *::before,
 .markdown-body *::after {
-	box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .markdown-body body,
@@ -28,424 +28,425 @@
 .markdown-body figcaption,
 .markdown-body dl,
 .markdown-body dd {
-	margin: 0
+  margin: 0;
 }
 
 .markdown-body {
-	font-family: 'Latin Modern', Georgia, Cambria, 'Times New Roman', Times, serif;
-	font-size: 1rem;
-	scroll-behavior: smooth;
-	line-height: 1.8;
-	max-width: 1000px; /* we added */
-	margin: 1rem auto 0 auto; /* we added */
-	min-height: 100vh;
-	overflow-x: hidden;
-	counter-reset: theorem;
-	counter-reset: definition;
-	counter-reset: sidenote-counter;
-	color: var(--color-text-primary);
-	background-color: var(--color-bg-canvas);
-	text-rendering: optimizeLegibility
+  font-family: "Latin Modern", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  line-height: 1.8;
+  max-width: 1000px; /* we added */
+  margin: 1rem auto 0 auto; /* we added */
+  min-height: 100vh;
+  overflow-x: hidden;
+  counter-reset: theorem;
+  counter-reset: definition;
+  counter-reset: sidenote-counter;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-canvas);
+  text-rendering: optimizeLegibility;
 }
 
 .markdown-body p {
-	text-align: justify;
-	hyphens: auto;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	margin-top: 1rem
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  margin-top: 1rem;
 }
 
 .markdown-body a:not([class]) {
-	text-decoration-skip-ink: auto
+  text-decoration-skip-ink: auto;
 }
 
 .markdown-body a,
 .markdown-body a:visited {
-	color: var(--color-text-link);
+  color: var(--color-text-link);
 }
 
 .markdown-body a:focus {
-	outline-offset: 2px;
-	outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+  outline: 2px solid var(--color-text-primary);
 }
 
 .markdown-body img {
-	max-width: 100%;
-	height: auto;
-	display: block
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .markdown-body input,
 .markdown-body button,
 .markdown-body textarea,
 .markdown-body select {
-	font: inherit
+  font: inherit;
 }
 
 .markdown-body textarea {
-	width: 100%
+  width: 100%;
 }
 
-.markdown-body article>*+* {
-	margin-top: 1em
+.markdown-body article > * + * {
+  margin-top: 1em;
 }
 
 .markdown-body code,
 .markdown-body pre,
 .markdown-body kbd {
-	font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-	font-size: 85%;
-	background-color: var(--color-bg-tertiary);
-	border-radius: 6px;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  font-size: 85%;
+  background-color: var(--color-bg-tertiary);
+  border-radius: 6px;
 }
 
 .markdown-body code {
-	padding: .2em .4em;
-	margin: 0;
+  padding: 0.2em 0.4em;
+  margin: 0;
 }
 
 .markdown-body pre {
-	padding: 1rem 1.4rem;
-	max-width: 100%;
-	overflow: auto;
+  padding: 1rem 1.4rem;
+  max-width: 100%;
+  overflow: auto;
 }
 
 .markdown-body pre code {
-	font-size: 95%;
-	position: relative
+  font-size: 95%;
+  position: relative;
 }
 
 .markdown-body kbd {
-	border: 1px solid hsl(210, 5%, 70%);
-	border-radius: 2px;
-	padding: 2px 4px;
-	font-size: 75%
+  border: 1px solid hsl(210, 5%, 70%);
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-size: 75%;
 }
 
 .markdown-body table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: auto;
-	max-width: 100%;
-	border-top: 2.27px solid var(--color-table-borders);
-	border-bottom: 2.27px solid var(--color-table-borders);
-	overflow-x: auto;
-	counter-increment: caption
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto;
+  max-width: 100%;
+  border-top: 2.27px solid var(--color-table-borders);
+  border-bottom: 2.27px solid var(--color-table-borders);
+  overflow-x: auto;
+  counter-increment: caption;
 }
 
-.markdown-body table tr>th[scope='col'] {
-	border-bottom: 1.36px solid var(--color-table-borders)
+.markdown-body table tr > th[scope="col"] {
+  border-bottom: 1.36px solid var(--color-table-borders);
 }
 
-.markdown-body table tr>th[scope='row'] {
-	border-right: 1.36px solid var(--color-table-borders)
+.markdown-body table tr > th[scope="row"] {
+  border-right: 1.36px solid var(--color-table-borders);
 }
 
-.markdown-body table>tbody>tr:first-child>td,
-.markdown-body table>tbody>tr:first-child>th {
-	border-top: 1.36px solid var(--color-table-borders)
+.markdown-body table > tbody > tr:first-child > td,
+.markdown-body table > tbody > tr:first-child > th {
+  border-top: 1.36px solid var(--color-table-borders);
 }
 
-.markdown-body table>tbody>tr:last-child>td,
-.markdown-body table>tbody>tr:last-child>th {
-	border-bottom: 1.36px solid var(--color-table-borders)
+.markdown-body table > tbody > tr:last-child > td,
+.markdown-body table > tbody > tr:last-child > th {
+  border-bottom: 1.36px solid var(--color-table-borders);
 }
 
 .markdown-body th,
 .markdown-body td {
-	text-align: left;
-	padding: .5rem;
-	line-height: 1.1
+  text-align: left;
+  padding: 0.5rem;
+  line-height: 1.1;
 }
 
 .markdown-body caption {
-	text-align: left;
-	font-size: .923em;
-	padding: 0 .25em .25em;
-	width: 100%;
-	margin-left: 0;
+  text-align: left;
+  font-size: 0.923em;
+  padding: 0 0.25em 0.25em;
+  width: 100%;
+  margin-left: 0;
 }
 
 .markdown-body caption::before {
-	content: 'Table ' counter(caption) '. ';
-	font-weight: bold
+  content: "Table " counter(caption) ". ";
+  font-weight: bold;
 }
 
 .markdown-body .scroll-wrapper {
-	overflow-x: auto;
+  overflow-x: auto;
 }
 
-.markdown-body .scroll-wrapper>table td {
-	white-space: nowrap;
+.markdown-body .scroll-wrapper > table td {
+  white-space: nowrap;
 }
 
 .markdown-body h1:first-child {
-	text-align: center
+  text-align: center;
 }
 
 .markdown-body nav ol {
-	counter-reset: item;
-	padding-left: 2rem
+  counter-reset: item;
+  padding-left: 2rem;
 }
 
 .markdown-body nav li {
-	display: block
+  display: block;
 }
 
 .markdown-body nav li:before {
-	content: counters(item, '.') ' ';
-	counter-increment: item;
-	padding-right: .85rem
+  content: counters(item, ".") " ";
+  counter-increment: item;
+  padding-right: 0.85rem;
 }
 
 .markdown-body dl dd {
-	text-align: center
+  text-align: center;
 }
 
 .markdown-body .theorem {
-	counter-increment: theorem;
-	display: block;
-	margin: 12px 0;
-	font-style: italic
+  counter-increment: theorem;
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
 }
 
 .markdown-body .theorem::before {
-	content: 'Theorem ' counter(theorem) '. ';
-	font-weight: bold;
-	font-style: normal
+  content: "Theorem " counter(theorem) ". ";
+  font-weight: bold;
+  font-style: normal;
 }
 
 .markdown-body .lemma {
-	counter-increment: theorem;
-	display: block;
-	margin: 12px 0;
-	font-style: italic
+  counter-increment: theorem;
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
 }
 
 .markdown-body .lemma::before {
-	content: 'Lemma ' counter(theorem) '. ';
-	font-weight: bold;
-	font-style: normal
+  content: "Lemma " counter(theorem) ". ";
+  font-weight: bold;
+  font-style: normal;
 }
 
 .markdown-body .proof {
-	display: block;
-	margin: 12px 0;
-	font-style: normal;
-	position: relative
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
+  position: relative;
 }
 
 .markdown-body .proof::before {
-	content: 'Proof. ' attr(title);
-	font-style: italic
+  content: "Proof. " attr(title);
+  font-style: italic;
 }
 
 .markdown-body .proof:after {
-	content: '◾️';
-	position: absolute;
-	right: -12px;
-	bottom: -2px
+  content: "◾️";
+  position: absolute;
+  right: -12px;
+  bottom: -2px;
 }
 
 .markdown-body .definition {
-	counter-increment: definition;
-	display: block;
-	margin: 12px 0;
-	font-style: normal
+  counter-increment: definition;
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
 }
 
 .markdown-body .definition::before {
-	content: 'Definition ' counter(definition) '. ';
-	font-weight: bold;
-	font-style: normal
+  content: "Definition " counter(definition) ". ";
+  font-weight: bold;
+  font-style: normal;
 }
 
 .markdown-body .author {
-	margin: .85rem 0;
-	font-variant-caps: small-caps;
-	text-align: center
+  margin: 0.85rem 0;
+  font-variant-caps: small-caps;
+  text-align: center;
 }
 
 .markdown-body .sidenote {
-	font-size: .8rem;
-	float: right;
-	clear: right;
-	width: 18vw;
-	margin-right: -20vw;
-	margin-bottom: 1em
+  font-size: 0.8rem;
+  float: right;
+  clear: right;
+  width: 18vw;
+  margin-right: -20vw;
+  margin-bottom: 1em;
 }
 
 .markdown-body .sidenote.left {
-	float: left;
-	margin-left: -20vw;
-	margin-bottom: 1em
+  float: left;
+  margin-left: -20vw;
+  margin-bottom: 1em;
 }
 
 .markdown-body .sidenote:target {
-	border: hsl(55, 55%, 70%) 1.5px solid;
-	padding: 0 .5rem;
-	scroll-margin-block-start: 10rem
+  border: hsl(55, 55%, 70%) 1.5px solid;
+  padding: 0 0.5rem;
+  scroll-margin-block-start: 10rem;
 }
 
 .markdown-body .sidenote-number {
-	counter-increment: sidenote-counter
+  counter-increment: sidenote-counter;
 }
 
 .markdown-body .sidenote-number::after,
 .markdown-body .sidenote::before {
-	position: relative;
-	vertical-align: baseline
+  position: relative;
+  vertical-align: baseline;
 }
 
 .markdown-body .sidenote-number::after {
-	content: counter(sidenote-counter);
-	font-size: .7rem;
-	top: -0.5rem;
-	left: .1rem
+  content: counter(sidenote-counter);
+  font-size: 0.7rem;
+  top: -0.5rem;
+  left: 0.1rem;
 }
 
-.markdown-body .sidenote-number~.sidenote::before {
-	content: counter(sidenote-counter) ' ';
-	font-size: .7rem;
-	top: -0.5rem
+.markdown-body .sidenote-number ~ .sidenote::before {
+  content: counter(sidenote-counter) " ";
+  font-size: 0.7rem;
+  top: -0.5rem;
 }
 
 .markdown-body label.sidenote-toggle:not(.sidenote-number) {
-	display: none
+  display: none;
 }
 
 .markdown-body blockquote .sidenote {
-	margin-right: -24vw;
-	width: 18vw
+  margin-right: -24vw;
+  width: 18vw;
 }
 
 .markdown-body label.sidenote-toggle {
-	display: inline;
-	cursor: pointer
+  display: inline;
+  cursor: pointer;
 }
 
 .markdown-body input.sidenote-toggle {
-	display: none
+  display: none;
 }
 
-@media(max-width:1050px) {
-	.markdown-body label.sidenote-toggle:not(.sidenote-number) {
-		display: inline
-	}
-	.markdown-body .sidenote {
-		display: none
-	}
-	.markdown-body .sidenote-toggle:checked+.sidenote {
-		display: block;
-		margin: .5rem 1.25rem 1rem .5rem;
-		float: left;
-		left: 1rem;
-		clear: both;
-		width: 95%
-	}
-	.markdown-body blockquote .sidenote {
-		margin-right: -25vw;
-		width: 16vw
-	}
+@media (max-width: 1050px) {
+  .markdown-body label.sidenote-toggle:not(.sidenote-number) {
+    display: inline;
+  }
+  .markdown-body .sidenote {
+    display: none;
+  }
+  .markdown-body .sidenote-toggle:checked + .sidenote {
+    display: block;
+    margin: 0.5rem 1.25rem 1rem 0.5rem;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+  }
+  .markdown-body blockquote .sidenote {
+    margin-right: -25vw;
+    width: 16vw;
+  }
 }
 
 .markdown-body .footnotes p {
-	text-align: left;
-	line-height: 1.5;
-	font-size: 85%;
-	margin-bottom: .4rem
+  text-align: left;
+  line-height: 1.5;
+  font-size: 85%;
+  margin-bottom: 0.4rem;
 }
 
 .markdown-body .footnotes {
-	border-top: 1px solid hsl(0, 0%, 39%)
+  border-top: 1px solid hsl(0, 0%, 39%);
 }
 
 .markdown-body .abstract,
 .markdown-body .abstract p {
-	text-align: center;
-	margin-top: 0
+  text-align: center;
+  margin-top: 0;
 }
 
 .markdown-body .abstract {
-	margin: 2.25rem 0
+  margin: 2.25rem 0;
 }
 
-.markdown-body .abstract>h2 {
-	font-size: 1rem;
-	margin-bottom: -0.2rem
+.markdown-body .abstract > h2 {
+  font-size: 1rem;
+  margin-bottom: -0.2rem;
 }
 
 .markdown-body .latex span:nth-child(1) {
-	text-transform: uppercase;
-	font-size: .75em;
-	vertical-align: .28em;
-	margin-left: -0.48em;
-	margin-right: -0.15em;
-	line-height: 1ex
+  text-transform: uppercase;
+  font-size: 0.75em;
+  vertical-align: 0.28em;
+  margin-left: -0.48em;
+  margin-right: -0.15em;
+  line-height: 1ex;
 }
 
 .markdown-body .latex span:nth-child(2) {
-	text-transform: uppercase;
-	vertical-align: -0.5ex;
-	margin-left: -0.1667em;
-	margin-right: -0.125em;
-	line-height: 1ex
+  text-transform: uppercase;
+  vertical-align: -0.5ex;
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+  line-height: 1ex;
 }
 
 .markdown-body h1 {
-	font-size: 2.5rem;
-	line-height: 3.25rem;
-	margin-bottom: 1.625rem
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  margin-bottom: 1.625rem;
 }
 
 .markdown-body h2 {
-	font-size: 1.7rem;
-	line-height: 2rem;
-	margin-top: 3rem
+  font-size: 1.7rem;
+  line-height: 2rem;
+  margin-top: 3rem;
 }
 
 .markdown-body h3 {
-	font-size: 1.4rem;
-	margin-top: 2.5rem
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
 }
 
 .markdown-body h4 {
-	font-size: 1.2rem;
-	margin-top: 2rem
+  font-size: 1.2rem;
+  margin-top: 2rem;
 }
 
 .markdown-body h5 {
-	font-size: 1rem;
-	margin-top: 1.8rem
+  font-size: 1rem;
+  margin-top: 1.8rem;
 }
 
 .markdown-body h6 {
-	font-size: 1rem;
-	font-style: italic;
-	font-weight: normal;
-	margin-top: 2.5rem
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  margin-top: 2.5rem;
 }
 
 .markdown-body h3,
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-	line-height: 1.625rem
+  line-height: 1.625rem;
 }
 
-.markdown-body h1+h2 {
-	margin-top: 1.625rem
+.markdown-body h1 + h2 {
+  margin-top: 1.625rem;
 }
 
-.markdown-body h2+h3,
-.markdown-body h3+h4,
-.markdown-body h4+h5 {
-	margin-top: .8rem
+.markdown-body h2 + h3,
+.markdown-body h3 + h4,
+.markdown-body h4 + h5 {
+  margin-top: 0.8rem;
 }
 
-.markdown-body h5+h6 {
-	margin-top: -0.8rem
+.markdown-body h5 + h6 {
+  margin-top: -0.8rem;
 }
 
 .markdown-body h2,
@@ -453,35 +454,35 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-	margin-bottom: .8rem
+  margin-bottom: 0.8rem;
 }
 
 /* syntax highlighting copied from GitHub Markdown CSS */
 .markdown-body .pl-c {
-	color: var(--color-prettylights-syntax-comment)
+  color: var(--color-prettylights-syntax-comment);
 }
 
 .markdown-body .pl-c1,
 .markdown-body .pl-s .pl-v {
-	color: var(--color-prettylights-syntax-constant)
+  color: var(--color-prettylights-syntax-constant);
 }
 
 .markdown-body .pl-e,
 .markdown-body .pl-en {
-	color: var(--color-prettylights-syntax-entity)
+  color: var(--color-prettylights-syntax-entity);
 }
 
 .markdown-body .pl-s .pl-s1,
 .markdown-body .pl-smi {
-	color: var(--color-prettylights-syntax-storage-modifier-import)
+  color: var(--color-prettylights-syntax-storage-modifier-import);
 }
 
 .markdown-body .pl-ent {
-	color: var(--color-prettylights-syntax-entity-tag)
+  color: var(--color-prettylights-syntax-entity-tag);
 }
 
 .markdown-body .pl-k {
-	color: var(--color-prettylights-syntax-keyword)
+  color: var(--color-prettylights-syntax-keyword);
 }
 
 .markdown-body .pl-pds,
@@ -490,92 +491,92 @@
 .markdown-body .pl-sr,
 .markdown-body .pl-sr .pl-sra,
 .markdown-body .pl-sr .pl-sre {
-	color: var(--color-prettylights-syntax-string)
+  color: var(--color-prettylights-syntax-string);
 }
 
 .markdown-body .pl-smw,
 .markdown-body .pl-v {
-	color: var(--color-prettylights-syntax-variable)
+  color: var(--color-prettylights-syntax-variable);
 }
 
 .markdown-body .pl-bu {
-	color: var(--color-prettylights-syntax-brackethighlighter-unmatched)
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
 }
 
 .markdown-body .pl-ii {
-	color: var(--color-prettylights-syntax-invalid-illegal-text);
-	background-color: var(--color-prettylights-syntax-invalid-illegal-bg)
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
 }
 
 .markdown-body .pl-c2 {
-	color: var(--color-prettylights-syntax-carriage-return-text);
-	background-color: var(--color-prettylights-syntax-carriage-return-bg)
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
 }
 
 .markdown-body .pl-c2::before {
-	content: "^M"
+  content: "^M";
 }
 
 .markdown-body .pl-sr .pl-cce {
-	font-weight: 700;
-	color: var(--color-prettylights-syntax-string-regexp)
+  font-weight: 700;
+  color: var(--color-prettylights-syntax-string-regexp);
 }
 
 .markdown-body .pl-ml {
-	color: var(--color-prettylights-syntax-markup-list)
+  color: var(--color-prettylights-syntax-markup-list);
 }
 
 .markdown-body .pl-mh,
 .markdown-body .pl-mh .pl-en,
 .markdown-body .pl-ms {
-	font-weight: 700;
-	color: var(--color-prettylights-syntax-markup-heading)
+  font-weight: 700;
+  color: var(--color-prettylights-syntax-markup-heading);
 }
 
 .markdown-body .pl-mi {
-	font-style: italic;
-	color: var(--color-prettylights-syntax-markup-italic)
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
 }
 
 .markdown-body .pl-mb {
-	font-weight: 700;
-	color: var(--color-prettylights-syntax-markup-bold)
+  font-weight: 700;
+  color: var(--color-prettylights-syntax-markup-bold);
 }
 
 .markdown-body .pl-md {
-	color: var(--color-prettylights-syntax-markup-deleted-text);
-	background-color: var(--color-prettylights-syntax-markup-deleted-bg)
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
 }
 
 .markdown-body .pl-mi1 {
-	color: var(--color-prettylights-syntax-markup-inserted-text);
-	background-color: var(--color-prettylights-syntax-markup-inserted-bg)
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
 }
 
 .markdown-body .pl-mc {
-	color: var(--color-prettylights-syntax-markup-changed-text);
-	background-color: var(--color-prettylights-syntax-markup-changed-bg)
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
 }
 
 .markdown-body .pl-mi2 {
-	color: var(--color-prettylights-syntax-markup-ignored-text);
-	background-color: var(--color-prettylights-syntax-markup-ignored-bg)
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
 }
 
 .markdown-body .pl-mdr {
-	font-weight: 700;
-	color: var(--color-prettylights-syntax-meta-diff-range)
+  font-weight: 700;
+  color: var(--color-prettylights-syntax-meta-diff-range);
 }
 
 .markdown-body .pl-ba {
-	color: var(--color-prettylights-syntax-brackethighlighter-angle)
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
 }
 
 .markdown-body .pl-sg {
-	color: var(--color-prettylights-syntax-sublimelinter-gutter-mark)
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
 }
 
 .markdown-body .pl-corl {
-	text-decoration: underline;
-	color: var(--color-prettylights-syntax-constant-other-reference-link)
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
 }

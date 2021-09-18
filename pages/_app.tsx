@@ -1,7 +1,7 @@
-import React, { createContext, useState } from "react";
-
 import "../styles/global.css";
+
 import type { AppProps } from "next/app";
+import React, { createContext, useState } from "react";
 
 export enum Style {
   LaTeX,
@@ -10,10 +10,11 @@ export enum Style {
 
 export const StyleContext = createContext({
   style: {
-    darkmode: false, style: Style.LaTeX, 
+    darkmode: false,
+    style: Style.LaTeX,
   },
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setStyle: (style: { darkmode: boolean, style: Style }) => {},
+  setStyle: (style: { darkmode: boolean; style: Style }) => {},
 });
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
