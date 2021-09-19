@@ -13,7 +13,7 @@
 
 /* Clever transition code from here: https://stackoverflow.com/a/50546888 */
 .button-hidden {
-  overflow: hidden;  /* Hide the element content, while height = 0 */
+  overflow: hidden; /* Hide the element content, while height = 0 */
   height: 0;
   opacity: 0;
   transition: height 0ms 0.2s, opacity 0.2s 0ms;
