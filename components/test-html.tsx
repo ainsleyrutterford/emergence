@@ -1,7 +1,7 @@
 import React from "react";
 
 import latexStyles from "../styles/latex.module.css";
-import { CodeBlock } from "./code-block";
+import { CodeBlock } from "./CodeBlock/code-block";
 
 const ttt =
   'import { Octokit } from "@octokit/core";\n\

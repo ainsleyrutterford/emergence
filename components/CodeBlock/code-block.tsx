@@ -1,5 +1,9 @@
 import { Octokit } from "@octokit/core";
 import React, { useEffect, useState } from "react";
+import { FcCheckmark } from "react-icons/fc";
+import { FiClipboard } from "react-icons/fi";
+
+import styles from "./code-block.module.css";
 
 interface Props {
   code: string;
@@ -12,7 +16,7 @@ export const CodeBlock = ({ code, language }: Props) => {
   const [html, setHtml] = useState("");
   const [visible, setVisible] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [text, setText] = useState("Copy to clipboard");
+  const [icon, setIcon] = useState(<FiClipboard />);
 
   // Use the GitHub Markdown API to generate the HTML with syntax highlighting
   useEffect(() => {
@@ -28,9 +32,9 @@ export const CodeBlock = ({ code, language }: Props) => {
   // Change the button to let the user know the text has been copied to the clipboard
   useEffect(() => {
     if (copied) {
-      setText("Copied");
+      setIcon(<FcCheckmark />);
       setTimeout(() => {
-        setText("Copy to clipboard");
+        setIcon(<FiClipboard />);
         setCopied(false);
       }, 2000);
     }
@@ -44,13 +48,14 @@ export const CodeBlock = ({ code, language }: Props) => {
       onBlur={() => setVisible(false)}
     >
       <button
-        style={{ position: "absolute", display: visible ? "inherit" : "none" }}
+        title="Copy to clipboard"
+        className={visible ? styles["button-visible"] : styles["button-hidden"]}
         onClick={() => {
           navigator.clipboard.writeText(code);
           setCopied(true);
         }}
       >
-        {text}
+        {icon}
       </button>
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </div>
