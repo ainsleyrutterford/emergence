@@ -1,3 +1,7 @@
+.code-block-container {
+  position: relative;
+}
+
 .button-hidden,
 .button-visible {
   position: absolute;
@@ -9,6 +13,9 @@
   left: 0;
   right: 0;
   margin: 12px 12px 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Clever transition code from here: https://stackoverflow.com/a/50546888 */
