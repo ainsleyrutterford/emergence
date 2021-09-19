@@ -46,6 +46,7 @@ export const CodeBlock = ({ code, language }: Props) => {
       onMouseLeave={() => setVisible(false)}
       onFocus={() => setVisible(true)}
       onBlur={() => setVisible(false)}
+      className={styles["code-block-container"]}
     >
       <button
         title="Copy to clipboard"
