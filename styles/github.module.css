@@ -795,6 +795,7 @@
   overflow-wrap: break-word;
   max-width: 1000px; /* we added */
   margin: 1rem auto 0 auto; /* we added */
+  color: var(--color-text-primary); /* we added */
 }
 
 .markdown-body > :first-child {
