@@ -44,7 +44,6 @@
   counter-reset: definition;
   counter-reset: sidenote-counter;
   color: var(--color-text-primary);
-  background-color: var(--color-bg-canvas);
   text-rendering: optimizeLegibility;
 }
 

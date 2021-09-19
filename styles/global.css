@@ -47,6 +47,9 @@ body {
 
 /* Set global colour values. Taken from GitHub Markdown CSS. */
 [color-mode="light"] {
+  --color-navbar-blur: rgba(252, 252, 252, 0.83);
+  --color-navbar-fallback: rgba(252, 252, 252, 0.97);
+  --color-navbar-border: rgba(226, 230, 236, 0.99);
   --color-table-borders: black;
   --color-scale-black: #1b1f23;
   --color-scale-white: #ffffff;
@@ -125,6 +128,9 @@ body {
 }
 
 [color-mode="dark"] {
+  --color-navbar-blur: rgba(13, 17, 23, 0.81);
+  --color-navbar-fallback: rgba(13, 17, 23, 0.97);
+  --color-navbar-border: rgba(26, 30, 36, 0.99);
   --color-table-borders: white;
   --color-scale-black: #010409;
   --color-scale-white: #f0f6fc;
@@ -200,10 +206,4 @@ body {
   --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
   --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
   color-scheme: dark;
-}
-
-[color-mode] {
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-canvas);
-  --color-text-white: var(--color-scale-white);
 }

@@ -31,7 +31,14 @@ npm run lint # only finds errors
 npm run lint -- --fix # finds and fixes any errors that it can
 ```
 
-There is also a GitHub action ([`.github/workflows/lint.yml`](.github/workflows/lint.yml)) which lints the code when a pull request to main is opened (this action only finds linting errors, it does not fix them).
+The Prettier plugin for ESLint is also used to lint the code. To lint the code manually run:
+
+```bash
+npm run prettier # only finds errors
+npm run prettier -- -w # finds and fixes any errors that it can
+```
+
+There is also a GitHub action ([`.github/workflows/lint.yml`](.github/workflows/lint.yml)) which lints the code when a pull request to main is opened (this action only finds linting errors, it does not fix them). Both the `npm run lint` and `npm run prettier` commands should not return any errors or warnings in order for this action to pass.
 
 ## Deployment
 

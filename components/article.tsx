@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useContext } from "react";
 
-import { Style, StyleContext } from "../pages/_app";
+import { Style, ThemeContext } from "../pages/_app";
 import githubStyles from "../styles/github.module.css";
 import latexStyles from "../styles/latex.module.css";
 
@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const Article = ({ title, children }: Props) => {
-  const { style } = useContext(StyleContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <>
@@ -24,10 +24,10 @@ export const Article = ({ title, children }: Props) => {
       </Head>
       <div
         // Set article dark mode
-        {...{ "color-mode": style.darkmode ? "dark" : "light" }}
+        {...{ "color-mode": theme.darkmode ? "dark" : "light" }}
         // Set article style
         className={
-          style.style === Style.LaTeX
+          theme.style === Style.LaTeX
             ? latexStyles["markdown-body"]
             : githubStyles["markdown-body"]
         }
