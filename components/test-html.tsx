@@ -1,18 +1,10 @@
-import { Octokit } from "@octokit/core";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import latexStyles from "../styles/latex.module.css";
+import { CodeBlock } from "./code-block";
 
-const octokit = new Octokit();
-
-const TestHTML = () => {
-  const [html, setHtml] = useState("");
-
-  useEffect(() => {
-    (async () => {
-      const code = await octokit.request("POST /markdown", {
-        text: '```javascript\n\
-import { Octokit } from "@octokit/core";\n\
+const ttt =
+  'import { Octokit } from "@octokit/core";\n\
 import React, { useEffect, useState } from "react";\n\
 \n\
 const person = { name: "Ainsley", age: 23, food: "pizza" };\n\
@@ -31,13 +23,9 @@ const Home: NextPage = () => {\n\
   );\n\
 };\n\
 \n\
-export default Home;',
-      });
+export default Home;';
 
-      setHtml(code.data);
-    })();
-  }, []);
-
+const TestHTML = () => {
   return (
     <>
       <section id="text">
@@ -56,6 +44,7 @@ export default Home;',
             <h5>Heading 5</h5>
             <h6>Heading 6</h6>
           </div>
+          <CodeBlock code={ttt} language="javascript" />
           <footer>
             <p>
               <a href="#top">[Top]</a>
@@ -352,7 +341,6 @@ export default Home;',
               <strong>Sample output:</strong>{" "}
               <samp>This is sample output from a computer program.</samp>
             </p>
-            <div dangerouslySetInnerHTML={{ __html: html }}></div>
           </div>
           <footer>
             <p>
