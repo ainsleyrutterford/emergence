@@ -25,6 +25,14 @@
   min-height: 16px;
 }
 
+.button-visible:hover {
+  background-color: var(--color-btn-hover-bg);
+}
+
+.button-visible:active {
+  background-color: var(--color-btn-active-bg);
+}
+
 /* Clever transition code from here: https://stackoverflow.com/a/50546888 */
 .button-hidden {
   overflow: hidden; /* Hide the element content, while height = 0 */
