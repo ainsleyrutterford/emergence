@@ -48,7 +48,7 @@ body {
 /* Set global colour values. Taken from GitHub Markdown CSS. */
 [color-mode="light"] {
   --color-btn-hover-bg: #f3f4f6;
-  --color-btn-active-bg: hsla(220,14%,93%,1);
+  --color-btn-active-bg: hsla(220, 14%, 93%, 1);
   --color-navbar-blur: rgba(252, 252, 252, 0.83);
   --color-navbar-fallback: rgba(252, 252, 252, 0.97);
   --color-navbar-border: rgba(226, 230, 236, 0.99);
@@ -131,7 +131,7 @@ body {
 
 [color-mode="dark"] {
   --color-btn-hover-bg: #30363d;
-  --color-btn-active-bg: hsla(212,12%,18%,1);
+  --color-btn-active-bg: hsla(212, 12%, 18%, 1);
   --color-navbar-blur: rgba(13, 17, 23, 0.81);
   --color-navbar-fallback: rgba(13, 17, 23, 0.97);
   --color-navbar-border: rgba(26, 30, 36, 0.99);
