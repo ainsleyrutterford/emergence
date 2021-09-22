@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const Article = ({ title, children }: Props) => {
-  const { theme } = useContext(ThemeContext);
+  const { articleStyle } = useContext(ThemeContext);
 
   return (
     <>
@@ -23,11 +23,9 @@ export const Article = ({ title, children }: Props) => {
         />
       </Head>
       <div
-        // Set article dark mode
-        {...{ "color-mode": theme.darkmode ? "dark" : "light" }}
         // Set article style
         className={
-          theme.style === Style.LaTeX
+          articleStyle === Style.LaTeX
             ? latexStyles["markdown-body"]
             : githubStyles["markdown-body"]
         }

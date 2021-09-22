@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import "../styles/global.css";
 
 import type { AppProps } from "next/app";
+import Script from "next/script";
 import React, { createContext, useEffect, useState } from "react";
 
 export enum Style {
@@ -8,47 +10,42 @@ export enum Style {
   GitHub,
 }
 
-export const ThemeContext = createContext({
-  theme: {
-    darkmode: false,
-    style: Style.LaTeX,
-  },
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setTheme: (style: { darkmode: boolean; style: Style }) => {},
-});
+export const ThemeContext = createContext<{
+  colorMode: string;
+  setColorMode: (mode: string) => void;
+  articleStyle: Style;
+  setArticleStyle: (style: Style) => void;
+}>({} as any);
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const [theme, setTheme] = useState({ darkmode: false, style: Style.LaTeX });
+  const [colorMode, setColorMode] = useState("");
+  const [articleStyle, setArticleStyle] = useState(Style.LaTeX);
 
+  // Runs once on initial render. Gets the color mode from the HTML element.
   useEffect(() => {
-    // Set the theme to be the same as the system theme initially
-    setTheme({
-      ...theme,
-      darkmode:
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches,
-    });
-
-    // Create an event listener for when the system theme changes
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (event) => {
-        setTheme({ ...theme, darkmode: event.matches });
-      });
+    const initialColorMode =
+      document.documentElement.getAttribute("color-mode");
+    setColorMode(initialColorMode === "dark" ? "dark" : "light");
   }, []);
 
+  // Runs each time colorMode is updated. Update the HTML element and store
+  // the new value in local storage
+  useEffect(() => {
+    if (colorMode !== "") {
+      document.documentElement.setAttribute("color-mode", colorMode);
+      window.localStorage.setItem("color-mode", colorMode);
+    }
+  }, [colorMode]);
+
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <Component {...pageProps} />
-      {/* This allows us to change the background programmatically */}
-      <style jsx global>
-        {`
-          body {
-            background: ${theme.darkmode ? "#0d1117" : "white"};
-          }
-        `}
-      </style>
-    </ThemeContext.Provider>
+    <>
+      <Script id="theme" strategy="beforeInteractive" src="theme.js" />
+      <ThemeContext.Provider
+        value={{ colorMode, setColorMode, articleStyle, setArticleStyle }}
+      >
+        <Component {...pageProps} />
+      </ThemeContext.Provider>
+    </>
   );
 };
 

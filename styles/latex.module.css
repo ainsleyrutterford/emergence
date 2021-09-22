@@ -43,7 +43,6 @@
   counter-reset: theorem;
   counter-reset: definition;
   counter-reset: sidenote-counter;
-  color: var(--color-text-primary);
   text-rendering: optimizeLegibility;
 }
 
