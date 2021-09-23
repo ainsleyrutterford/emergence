@@ -45,6 +45,7 @@ const TestHTML = () => {
             <h6>Heading 6</h6>
           </div>
           <CodeBlock code={ttt} language="javascript" />
+          <img src="rocks.jpg" />
           <footer>
             <p>
               <a href="#top">[Top]</a>
