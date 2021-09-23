@@ -139,6 +139,8 @@
   border-bottom-color: var(--color-border-tertiary);
   border-radius: 6px;
   box-shadow: inset 0 -1px 0 var(--color-border-tertiary);
+  transition: color var(--quick-ease), background-color var(--quick-ease),
+    border-color var(--quick-ease), box-shadow var(--quick-ease);
 }
 
 .markdown-body dl,
@@ -252,6 +254,7 @@
   background-color: transparent;
   color: var(--color-text-link);
   text-decoration: none;
+  transition: color var(--quick-ease), background-color var(--quick-ease);
 }
 
 .markdown-body a:active,
@@ -267,6 +270,7 @@
   border-style: none;
   max-width: 100%;
   background-color: var(--color-bg-primary);
+  transition: background-color var(--quick-ease);
 }
 
 .markdown-body hr,
@@ -312,6 +316,7 @@
   background: 0 0;
   border-image: initial;
   border-bottom: 1px solid var(--color-border-secondary);
+  transition: border-color var(--quick-ease);
 }
 
 .markdown-body .rule::after,
@@ -381,6 +386,7 @@
 
 .markdown-body .border {
   border: 1px solid var(--color-border-primary) !important;
+  transition: border-color var(--quick-ease);
 }
 
 .markdown-body .border-0 {
@@ -389,6 +395,7 @@
 
 .markdown-body .border-bottom {
   border-bottom: 1px solid var(--color-border-primary) !important;
+  transition: border-color var(--quick-ease);
 }
 
 .markdown-body .rounded-1 {
@@ -397,6 +404,7 @@
 
 .markdown-body .color-text-tertiary {
   color: var(--color-text-tertiary) !important;
+  transition: color var(--quick-ease);
 }
 
 .markdown-body .color-bg-primary {
@@ -672,6 +680,7 @@
   overflow-wrap: break-word;
   max-width: 1000px; /* we added */
   margin: 1rem auto 0 auto; /* we added */
+  padding: 0px 16px 100px 16px; /* we added */
 }
 
 .markdown-body > :first-child {
@@ -705,12 +714,14 @@
   margin: 24px 0;
   background-color: var(--color-border-primary);
   border: 0;
+  transition: background-color var(--quick-ease);
 }
 
 .markdown-body blockquote {
   padding: 0 1em;
   color: var(--color-text-tertiary);
   border-left: 0.25em solid var(--color-markdown-blockquote-border);
+  transition: color var(--quick-ease), border-color var(--quick-ease);
 }
 
 .markdown-body blockquote > :first-child {
@@ -738,6 +749,7 @@
   padding-bottom: 0.3em;
   font-size: 2em;
   border-bottom: 1px solid var(--color-border-secondary);
+  transition: border-color var(--quick-ease);
 }
 
 .markdown-body h2 {
@@ -759,6 +771,7 @@
 .markdown-body h6 {
   font-size: 0.85em;
   color: var(--color-text-tertiary);
+  transition: color var(--quick-ease);
 }
 
 .markdown-body ol,
@@ -798,15 +811,18 @@
 .markdown-body table th {
   padding: 6px 13px;
   border: 1px solid var(--color-markdown-table-border);
+  transition: border-color var(--quick-ease);
 }
 
 .markdown-body table tr {
   background-color: var(--color-bg-primary);
   border-top: 1px solid var(--color-markdown-table-tr-border);
+  transition: background-color var(--quick-ease), border-color var(--quick-ease);
 }
 
 .markdown-body table tr:nth-child(2n) {
   background-color: var(--color-bg-tertiary);
+  transition: background-color var(--quick-ease);
 }
 
 .markdown-body img[align="right"] {
@@ -824,6 +840,7 @@
   font-size: 85%;
   background-color: var(--color-markdown-code-bg);
   border-radius: 6px;
+  transition: background-color var(--quick-ease);
 }
 
 .markdown-body pre {
@@ -860,6 +877,7 @@
   line-height: 1.45;
   background-color: var(--color-bg-tertiary);
   border-radius: 6px;
+  transition: background-color var(--quick-ease);
 }
 
 .markdown-body pre code,

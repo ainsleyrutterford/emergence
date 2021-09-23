@@ -1,9 +1,14 @@
+:root {
+  --quick-ease: 0.4s ease-out;
+}
+
 body {
   margin: 0;
   padding: 0;
   max-width: 100%;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
+  transition: color var(--quick-ease), background-color var(--quick-ease);
 }
 
 /* Setup LaTeX fonts */
@@ -217,29 +222,35 @@ body {
 /* Syntax highlighting classes. Need to move here so they are global */
 .pl-c {
   color: var(--color-prettylights-syntax-comment);
+  transition: color var(--quick-ease);
 }
 
 .pl-c1,
 .pl-s .pl-v {
   color: var(--color-prettylights-syntax-constant);
+  transition: color var(--quick-ease);
 }
 
 .pl-e,
 .pl-en {
   color: var(--color-prettylights-syntax-entity);
+  transition: color var(--quick-ease);
 }
 
 .pl-s .pl-s1,
 .pl-smi {
   color: var(--color-prettylights-syntax-storage-modifier-import);
+  transition: color var(--quick-ease);
 }
 
 .pl-ent {
   color: var(--color-prettylights-syntax-entity-tag);
+  transition: color var(--quick-ease);
 }
 
 .pl-k {
   color: var(--color-prettylights-syntax-keyword);
+  transition: color var(--quick-ease);
 }
 
 .pl-pds,
@@ -249,25 +260,30 @@ body {
 .pl-sr .pl-sra,
 .pl-sr .pl-sre {
   color: var(--color-prettylights-syntax-string);
+  transition: color var(--quick-ease);
 }
 
 .pl-smw,
 .pl-v {
   color: var(--color-prettylights-syntax-variable);
+  transition: color var(--quick-ease);
 }
 
 .pl-bu {
   color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+  transition: color var(--quick-ease);
 }
 
 .pl-ii {
   color: var(--color-prettylights-syntax-invalid-illegal-text);
   background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+  transition: color var(--quick-ease), background-color var(--quick-ease);
 }
 
 .pl-c2 {
   color: var(--color-prettylights-syntax-carriage-return-text);
   background-color: var(--color-prettylights-syntax-carriage-return-bg);
+  transition: color var(--quick-ease), background-color var(--quick-ease);
 }
 
 .pl-c2::before {
@@ -277,10 +293,12 @@ body {
 .pl-sr .pl-cce {
   font-weight: 700;
   color: var(--color-prettylights-syntax-string-regexp);
+  transition: color var(--quick-ease);
 }
 
 .pl-ml {
   color: var(--color-prettylights-syntax-markup-list);
+  transition: color var(--quick-ease);
 }
 
 .pl-mh,
@@ -288,52 +306,63 @@ body {
 .pl-ms {
   font-weight: 700;
   color: var(--color-prettylights-syntax-markup-heading);
+  transition: color var(--quick-ease);
 }
 
 .pl-mi {
   font-style: italic;
   color: var(--color-prettylights-syntax-markup-italic);
+  transition: color var(--quick-ease);
 }
 
 .pl-mb {
   font-weight: 700;
   color: var(--color-prettylights-syntax-markup-bold);
+  transition: color var(--quick-ease);
 }
 
 .pl-md {
   color: var(--color-prettylights-syntax-markup-deleted-text);
   background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+  transition: color var(--quick-ease), background-color var(--quick-ease);
 }
 
 .pl-mi1 {
   color: var(--color-prettylights-syntax-markup-inserted-text);
   background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+  transition: color var(--quick-ease), background-color var(--quick-ease);
 }
 
 .pl-mc {
   color: var(--color-prettylights-syntax-markup-changed-text);
   background-color: var(--color-prettylights-syntax-markup-changed-bg);
+  transition: color var(--quick-ease), background-color var(--quick-ease);
 }
 
 .pl-mi2 {
   color: var(--color-prettylights-syntax-markup-ignored-text);
   background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+  transition: color var(--quick-ease), background-color var(--quick-ease);
 }
 
 .pl-mdr {
   font-weight: 700;
   color: var(--color-prettylights-syntax-meta-diff-range);
+  transition: color var(--quick-ease);
 }
 
 .pl-ba {
   color: var(--color-prettylights-syntax-brackethighlighter-angle);
+  transition: color var(--quick-ease);
 }
 
 .pl-sg {
   color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+  transition: color var(--quick-ease);
 }
 
 .pl-corl {
   text-decoration: underline;
   color: var(--color-prettylights-syntax-constant-other-reference-link);
+  transition: color var(--quick-ease);
 }

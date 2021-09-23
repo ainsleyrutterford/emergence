@@ -19,10 +19,11 @@
   align-items: center;
 }
 
-.button-hidden,
+.button-hidden svg,
 .button-visible svg {
   min-width: 16px;
   min-height: 16px;
+  transform: translateX(0); /* for some reason this centers the SVG in safari */
 }
 
 .button-visible:hover {
