@@ -2,6 +2,7 @@
 import "../styles/global.css";
 
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import Script from "next/script";
 import React, { createContext, useEffect, useState } from "react";
 
@@ -39,7 +40,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <Script id="theme" strategy="beforeInteractive" src="theme.js" />
+      <Head>
+        <script id="theme" src="theme.js" />
+        <link
+          rel="icon"
+          href={`/${process.env.NEXT_PUBLIC_REPO_NAME}/favicon.ico`}
+        />
+      </Head>
       <ThemeContext.Provider
         value={{ colorMode, setColorMode, articleStyle, setArticleStyle }}
       >
