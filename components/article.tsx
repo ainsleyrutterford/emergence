@@ -17,10 +17,6 @@ export const Article = ({ title, children }: Props) => {
     <>
       <Head>
         <title>{title}</title>
-        <link
-          rel="icon"
-          href={`/${process.env.NEXT_PUBLIC_REPO_NAME}/favicon.ico`}
-        />
       </Head>
       <div
         // Set article style
