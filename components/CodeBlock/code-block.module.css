@@ -17,6 +17,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--quick-ease), border-color var(--quick-ease),
+    color var(--quick-ease);
 }
 
 .button-hidden svg,
