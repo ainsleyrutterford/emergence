@@ -8,10 +8,10 @@
   transition: background-color var(--quick-ease), border-color var(--quick-ease);
 }
 
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+@supports (backdrop-filter: none) or (-webkit-backdrop-filter: none) {
   .navbar {
-    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     background-color: var(--color-navbar-blur);
   }
 }
