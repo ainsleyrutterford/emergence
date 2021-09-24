@@ -8,7 +8,8 @@
     "export": "next export",
     "start": "next start",
     "lint": "eslint . --ext js,ts,tsx",
-    "prettier": "npx prettier -c --ignore-path .eslintignore ."
+    "prettier": "npx prettier -c --ignore-path .eslintignore .",
+    "generate": "node utils/generate.mjs"
   },
   "dependencies": {
     "@octokit/core": "^3.5.1",

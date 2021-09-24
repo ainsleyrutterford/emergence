@@ -2,28 +2,7 @@ import React from "react";
 
 import latexStyles from "../styles/latex.module.css";
 import { CodeBlock } from "./CodeBlock/code-block";
-
-const ttt =
-  'import { Octokit } from "@octokit/core";\n\
-import React, { useEffect, useState } from "react";\n\
-\n\
-const person = { name: "Ainsley", age: 23, food: "pizza" };\n\
-import { Article } from "../components/article";\n\
-import { Navbar } from "../components/Navbar/navbar";\n\
-import TestHTML from "../components/test-html";\n\
-\n\
-const Home: NextPage = () => {\n\
-  return (\n\
-    <>\n\
-      <Navbar />\n\
-      <Article title="Emergence">\n\
-        <TestHTML />\n\
-      </Article>\n\
-    </>\n\
-  );\n\
-};\n\
-\n\
-export default Home;';
+import { code, html } from "./snippet";
 
 const TestHTML = () => {
   return (
@@ -44,7 +23,7 @@ const TestHTML = () => {
             <h5>Heading 5</h5>
             <h6>Heading 6</h6>
           </div>
-          <CodeBlock code={ttt} language="javascript" />
+          <CodeBlock code={code} html={html} />
           <img src="rocks.jpg" />
           <footer>
             <p>

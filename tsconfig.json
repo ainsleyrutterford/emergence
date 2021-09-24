@@ -19,7 +19,8 @@
     "**/*.ts",
     "**/*.tsx",
     "*config.js",
-    "public/*.js"
+    "public/*.js",
+    "utils/generate.mjs"
   ],
   "exclude": ["node_modules", "tests"]
 }
