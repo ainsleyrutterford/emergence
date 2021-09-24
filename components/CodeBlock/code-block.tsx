@@ -1,4 +1,3 @@
-import { Octokit } from "@octokit/core";
 import React, { useEffect, useState } from "react";
 import { FcCheckmark } from "react-icons/fc";
 import { FiClipboard } from "react-icons/fi";
@@ -7,27 +6,13 @@ import styles from "./code-block.module.css";
 
 interface Props {
   code: string;
-  language: string;
+  html: string;
 }
 
-const octokit = new Octokit();
-
-export const CodeBlock = ({ code, language }: Props) => {
-  const [html, setHtml] = useState("");
+export const CodeBlock = ({ code, html }: Props) => {
   const [visible, setVisible] = useState(false);
   const [copied, setCopied] = useState(false);
   const [icon, setIcon] = useState(<FiClipboard />);
-
-  // Use the GitHub Markdown API to generate the HTML with syntax highlighting
-  useEffect(() => {
-    (async () => {
-      const codeHtml = await octokit.request("POST /markdown", {
-        text: "```" + language + "\n" + code,
-      });
-
-      setHtml(codeHtml.data);
-    })();
-  }, []);
 
   // Change the button to let the user know the text has been copied to the clipboard
   useEffect(() => {
