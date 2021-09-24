@@ -1,4 +1,5 @@
 import { Octokit } from "@octokit/core";
+import { execSync } from "child_process";
 import fs from "fs";
 
 const error = (message) => {
@@ -27,13 +28,26 @@ const getHtmlFromGitHub = async (code, language) => {
   }
 };
 
+// https://www.codegrepper.com/code-examples/javascript/js+escape+all+special+characters
+const escapeAll = (string) =>
+  string.replace(/[."`'*+?^${}()|[\]\\]/g, "\\$&").replace(/\n/g, "\\n");
+
 const writeToFile = (file, code, html) => {
-  const contents = `${code} ${html}`;
+  const contents = `export const code = "${escapeAll(code)}";\n
+  export const html = "${escapeAll(html)}";`;
 
   try {
     fs.writeFileSync(file, contents);
   } catch (e) {
     error(`Error writing to file ${file}: ${e}`);
+  }
+};
+
+const lintOutputFile = (file) => {
+  try {
+    execSync(`npx eslint ${file} --fix`);
+  } catch (e) {
+    error(`Error linting output file ${file}: ${e}`);
   }
 };
 
@@ -48,7 +62,9 @@ const main = async () => {
 
   const code = getCodeFromFile(inputFile);
   const html = await getHtmlFromGitHub(code, language);
+
   writeToFile(outputFile, code, html);
+  lintOutputFile(outputFile);
 };
 
 main();
