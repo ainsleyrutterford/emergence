@@ -16,7 +16,7 @@
   },
   "include": [
     "next-env.d.ts",
-    "next-imagea.d.ts",
+    "next-images.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "*config.js",
