@@ -32,6 +32,7 @@ const TestHTML = () => {
             webp
             densities={[1, 2]}
             sizes={[400, 800, 1600, 2400, 3000]}
+            alt="Some rocks"
           />
           <footer>
             <p>
