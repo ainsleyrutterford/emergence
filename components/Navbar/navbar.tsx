@@ -11,11 +11,16 @@ export const Navbar = () => {
       <div className={styles.navbar}>
         <button onClick={() => setArticleStyle(Style.LaTeX)}>LaTeX</button>
         <button onClick={() => setArticleStyle(Style.GitHub)}>GitHub</button>
-        <input
-          type="checkbox"
-          checked={colorMode === "dark"}
-          onChange={() => setColorMode(colorMode === "dark" ? "light" : "dark")}
-        ></input>
+        <label>
+          Darkmode
+          <input
+            type="checkbox"
+            checked={colorMode === "dark"}
+            onChange={() =>
+              setColorMode(colorMode === "dark" ? "light" : "dark")
+            }
+          />
+        </label>
       </div>
       <div style={{ minHeight: "50px" }} />
     </>

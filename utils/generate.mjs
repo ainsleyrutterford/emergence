@@ -1,3 +1,5 @@
+// @ts-check
+
 import { Octokit } from "@octokit/core";
 import { execSync } from "child_process";
 import fs from "fs";

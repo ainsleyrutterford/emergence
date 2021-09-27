@@ -1,5 +1,7 @@
 import React from "react";
+import Img from "react-optimized-image";
 
+import rocks from "../public/rocks.jpg";
 import latexStyles from "../styles/latex.module.css";
 import { CodeBlock } from "./CodeBlock/code-block";
 import { code, html } from "./snippet";
@@ -24,7 +26,14 @@ const TestHTML = () => {
             <h6>Heading 6</h6>
           </div>
           <CodeBlock code={code} html={html} />
-          <img src="rocks.jpg" />
+          {/* <img src="rocks.jpg" /> */}
+          <Img
+            src={rocks}
+            webp
+            densities={[1, 2]}
+            sizes={[400, 800, 1600, 2400, 3000]}
+            alt="Some rocks"
+          />
           <footer>
             <p>
               <a href="#top">[Top]</a>
