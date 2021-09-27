@@ -26,8 +26,13 @@ const TestHTML = () => {
             <h6>Heading 6</h6>
           </div>
           <CodeBlock code={code} html={html} />
-          <img src="rocks.jpg" />
-          <Img src={rocks} webp densities={[1, 2]} sizes={[800, 1500, 3000]} />
+          {/* <img src="rocks.jpg" /> */}
+          <Img
+            src={rocks}
+            webp
+            densities={[1, 2]}
+            sizes={[400, 800, 1600, 2400, 3000]}
+          />
           <footer>
             <p>
               <a href="#top">[Top]</a>
