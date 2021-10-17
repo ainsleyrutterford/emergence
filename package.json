@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "eslint . --ext js,ts,tsx",
     "prettier": "npx prettier -c --ignore-path .eslintignore .",
-    "generate": "node utils/generate.mjs"
+    "generate": "node utils/generate.mjs",
+    "build-electron": "NODE_ENV=dev npm run build && NODE_ENV=dev npm run export && tsc --outDir out utils/electron.ts",
+    "electron": "electron out/electron.js"
   },
   "dependencies": {
     "@octokit/core": "^3.5.1",
@@ -24,6 +26,7 @@
     "@types/react": "17.0.19",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
+    "electron": "^15.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^14.0.0",
     "eslint-config-next": "11.1.0",
