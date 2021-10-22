@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "eslint . --ext js,ts,tsx",
     "prettier": "npx prettier -c --ignore-path .eslintignore .",
-    "generate": "node utils/generate.mjs"
+    "generate": "node utils/generate.mjs",
+    "build-electron": "NODE_ENV=dev npm run build && NODE_ENV=dev npm run export && tsc --outDir out utils/electron.ts",
+    "electron": "electron out/electron.js"
   },
   "dependencies": {
     "@octokit/core": "^3.5.1",
