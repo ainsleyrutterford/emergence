@@ -4,14 +4,12 @@ import "../styles/global.css";
 import type { AppProps } from "next/app";
 import React, { createContext, useEffect, useState } from "react";
 
-const defaultContext = {
-  colorMode: "",
-  setColorMode: (mode: string) => {},
-  articleStyle: "",
-  setArticleStyle: (style: string) => {},
-};
-
-export const ThemeContext = createContext(defaultContext);
+export const ThemeContext = createContext<{
+  colorMode: string;
+  setColorMode: (mode: string) => void;
+  articleStyle: string;
+  setArticleStyle: (style: string) => void;
+}>({} as any);
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [colorMode, setColorMode] = useState("");
