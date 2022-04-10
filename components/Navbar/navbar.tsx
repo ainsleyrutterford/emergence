@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { Style, ThemeContext } from "../../pages/_app";
+import { ThemeContext } from "../../pages/_app";
 import styles from "./navbar.module.css";
 
 export const Navbar = () => {
@@ -9,8 +9,8 @@ export const Navbar = () => {
   return (
     <>
       <div className={styles.navbar}>
-        <button onClick={() => setArticleStyle(Style.LaTeX)}>LaTeX</button>
-        <button onClick={() => setArticleStyle(Style.GitHub)}>GitHub</button>
+        <button onClick={() => setArticleStyle("latex")}>LaTeX</button>
+        <button onClick={() => setArticleStyle("github")}>GitHub</button>
         <label>
           Darkmode
           <input

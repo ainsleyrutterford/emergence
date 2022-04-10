@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useContext } from "react";
 
-import { Style, ThemeContext } from "../pages/_app";
+import { ThemeContext } from "../pages/_app";
 import githubStyles from "../styles/github.module.css";
 import latexStyles from "../styles/latex.module.css";
 
@@ -21,7 +21,7 @@ export const Article = ({ title, children }: Props) => {
       <div
         // Set article style
         className={
-          articleStyle === Style.LaTeX
+          articleStyle === "latex"
             ? latexStyles["markdown-body"]
             : githubStyles["markdown-body"]
         }
