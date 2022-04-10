@@ -1,7 +1,6 @@
 # [Emergence](https://ainsleyrutterford.github.io/emergence)
 
 ![Website](https://img.shields.io/website?label=Website&url=https%3A%2F%2Fainsleyrutterford.github.io%2Femergence)
-![code quality](https://img.shields.io/codefactor/grade/github/ainsleyrutterford/emergence?label=Code%20quality)
 ![typescript](https://img.shields.io/github/languages/top/ainsleyrutterford/emergence?label=TypeScript)
 ![license](https://img.shields.io/github/license/ainsleyrutterford/emergence?label=License)
 
