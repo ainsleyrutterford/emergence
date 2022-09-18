@@ -3,6 +3,7 @@ import Img from "react-optimized-image";
 
 import rocks from "../public/rocks.jpg";
 import latexStyles from "../styles/latex.module.css";
+import { Canvas } from "./Canvas";
 import { CodeBlock } from "./CodeBlock/code-block";
 import { code, html } from "./snippet";
 
@@ -17,6 +18,7 @@ const TestHTML = () => {
           <header>
             <h2>Headings</h2>
           </header>
+          <Canvas />
           <div>
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
